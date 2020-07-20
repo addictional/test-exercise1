@@ -4,7 +4,7 @@
   "main": "./src/index.js",
   "license": "MIT",
   "scripts": {
-    "run": "yarn webpack-dev-server"
+    "start": "yarn webpack-dev-server"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
