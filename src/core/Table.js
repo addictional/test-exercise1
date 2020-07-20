@@ -94,6 +94,7 @@ export default class Table {
         const active = typeof this.storage.read()[id] != 'undefined' ? this.storage.read()[id] : false;
         if(this.items[id]) {
             this.items[id].node.innerHTML = this._createHtml(data,length);
+            this.items[id].node.setAttribute('data-length',length);
         } else {
             const node = this._createLiNode(data,length);
             this._addEvent(node,id);
@@ -123,6 +124,7 @@ export default class Table {
             return this.sort === "ASC" ? a.dataset.length-b.dataset.length : b.dataset.length-a.dataset.length;
         }).forEach(el=>{
             this.ul.appendChild(el);
-        })    
+        })
+   
     }
 }   
