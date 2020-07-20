@@ -47,6 +47,7 @@ export default class AirportService {
             this.isLoading = false;
         } catch(e) {
             this.isLoading = false;
+            alert(e.message);
         }
     }  
 }
